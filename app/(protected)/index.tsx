@@ -11,13 +11,12 @@ const Page = () => {
 	const router = useRouter()
 	const onLogoutPressed = () => {
 		onLogout!();
-		
-		
+		router.replace("../../login");
 	};
 
 	return (
 		<View style={styles.container}>
-			<Text style={styles.title}>Wheel</Text>
+			<Text style={styles.title}>index</Text>
 			<Text style={styles.title}>Role: {authState?.role}</Text>
 			<Button title="Logout" onPress={onLogoutPressed} />
 			<View style={styles.separator} />

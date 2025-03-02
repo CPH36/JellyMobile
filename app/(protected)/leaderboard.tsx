@@ -5,17 +5,15 @@ import WithRole from '../../components/WithRole';
 
 const Page = () => {
 	const { authState, onLogout } = useAuth();
-	const router = useRouter()
+    const router = useRouter()
 	const onLogoutPressed = () => {
-		
         onLogout!();
-
         router.replace("../../login")
 	};
 
 	return (
 		<View style={styles.container}>
-			<Text style={styles.title}>News</Text>
+			<Text style={styles.title}>LeaderBoard Top 100</Text>
 			<Text style={styles.title}>Role: {authState?.role}</Text>
 			<Button title="Logout" onPress={onLogoutPressed} />
 			<View style={styles.separator} />

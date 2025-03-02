@@ -1,4 +1,4 @@
-import { Stack, useRouter, useSegments, useNavigation } from 'expo-router';
+import { Stack, useRouter, useSegments } from 'expo-router';
 import { AuthProvider, useAuth } from '../context/AuthContext';
 import { useEffect } from 'react';
 
@@ -9,9 +9,9 @@ const StackLayout = () => {
 
 	useEffect(() => {
 		const inAuthGroup = segments[0] === '(protected)';
-    console.log(authState, inAuthGroup)
+    
 		if (!authState?.authenticated && inAuthGroup) {    
-      router.replace("/")
+      router.replace("./login")
 		} else if (authState?.authenticated === true) {
 			router.replace('./(protected)');
 		}
@@ -19,8 +19,10 @@ const StackLayout = () => {
 
 	return (
 		<Stack>
-			<Stack.Screen name="index" options={{ headerShown: false }} />
+			<Stack.Screen name="login" options={{ headerShown: false }} />
 			<Stack.Screen name="(protected)" options={{ headerShown: false }} />
+      <Stack.Screen name="faucet" options={{ headerShown: false }} />
+      <Stack.Screen name="rewards" options={{ headerShown: false }} />
 		</Stack>
 	);
 };

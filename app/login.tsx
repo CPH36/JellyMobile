@@ -23,7 +23,7 @@ const Page = () => {
 			behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
 			style={styles.container}
 		>
-			<Text style={styles.header}>My Epic App</Text>
+			<Text style={styles.header}>JELLY LOGIN</Text>
 			<TextInput
 				autoCapitalize="none"
 				placeholder="admin"
