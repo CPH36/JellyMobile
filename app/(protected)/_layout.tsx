@@ -23,19 +23,19 @@ const DrawerLayout = () => {
 				/>
 
 				<Drawer.Screen
-					name="Faucet"
+					name="faucet"
 					
 					options={{
 						headerTitle: 'JellyFishCoin',
 						drawerLabel: 'Faucet',
 						drawerIcon: ({ size, color }) => (
-							<Ionicons name="cash-outline" size={size} color={color} />
+							<Ionicons name="water-outline" size={size} color={color} />
 						)
 					}}
 					redirect={authState?.role !== Role.USER}
 				/>
 				<Drawer.Screen
-					name="Rewards"
+					name="rewards"
 					
 					options={{
 						headerTitle: 'Jelly Rewards',
@@ -47,37 +47,37 @@ const DrawerLayout = () => {
 					redirect={authState?.role !== Role.USER}
 				/>
 				<Drawer.Screen
-					name="Music"
+					name="music"
 					
 					options={{
 						headerTitle: 'Music Videos',
 						drawerLabel: 'Music',
 						drawerIcon: ({ size, color }) => (
-							<Ionicons name="musical-note-outline" size={size} color={color} />
+							<Ionicons name="musical-notes-outline" size={size} color={color} />
 						)
 					}}
-					redirect={authState?.role !== Role.USER}
+					redirect={authState?.role !== Role.USER} 
 				/>
 				<Drawer.Screen
-					name="Marketplace"
+					name="marketplace"
 					
 					options={{
 						headerTitle: 'Marketplace',
 						drawerLabel: 'Market',
 						drawerIcon: ({ size, color }) => (
-							<Ionicons name="people-outline" size={size} color={color} />
+							<Ionicons name="card-outline" size={size} color={color} />
 						)
 					}}
 					redirect={authState?.role !== Role.USER}
 				/>
 				<Drawer.Screen
-					name="LeaderBoard"
+					name="leaderboard"
 					
 					options={{
 						headerTitle: 'LeaderBoard',
 						drawerLabel: 'Leader',
 						drawerIcon: ({ size, color }) => (
-							<Ionicons name="rocket-outline" size={size} color={color} />
+							<Ionicons name="people-outline" size={size} color={color} />
 						)
 					}}
 					redirect={authState?.role !== Role.USER}
@@ -88,7 +88,7 @@ const DrawerLayout = () => {
 					headerTitle: 'Newsfeed',
 					drawerLabel: 'News',
 					drawerIcon: ({ size, color }) => (
-						<Ionicons name="newspaper-outline" size={size} color={color} />
+						<Ionicons name="cog-outline" size={size} color={color} />
 					)
 				}}
 				redirect={authState?.role !== Role.USER}
@@ -99,7 +99,7 @@ const DrawerLayout = () => {
 						headerTitle: 'Admin Area',
 						drawerLabel: 'Admin',
 						drawerIcon: ({ size, color }) => (
-							<Ionicons name="cog-outline" size={size} color={color} />
+							<Ionicons name="flash-outline" size={size} color={color} />
 						)
 					}}
 					redirect={authState?.role !== Role.ADMIN}

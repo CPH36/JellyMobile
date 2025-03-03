@@ -21,8 +21,7 @@ const StackLayout = () => {
 		<Stack>
 			<Stack.Screen name="login" options={{ headerShown: false }} />
 			<Stack.Screen name="(protected)" options={{ headerShown: false }} />
-      <Stack.Screen name="faucet" options={{ headerShown: false }} />
-      <Stack.Screen name="rewards" options={{ headerShown: false }} />
+      
 		</Stack>
 	);
 };

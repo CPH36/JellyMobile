@@ -7,7 +7,9 @@ const Page = () => {
 	const { authState, onLogout } = useAuth();
     const router = useRouter()
 	const onLogoutPressed = () => {
+		
         onLogout!();
+
         router.replace("../../login")
 	};
 
